@@ -78,7 +78,7 @@ let verify = async (tokenn, password, countryCode, mail) => {
         return;
       }
       msgres = await axios.get(
-        `https://onlinesim.ru/api/getState.php?apikey=0ba5f5de626a9d0928def3c49f0eb50f&tzid=${tzid}`
+        `https://onlinesim.ru/api/getState.php?apikey=${config.apiKey}&tzid=${tzid}`
       );
       msg = msgres.data[0].msg;
       count = count + 1;
